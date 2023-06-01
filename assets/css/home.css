@@ -3,6 +3,8 @@
     --text-color: #fff;
     --text-color-basic: #767d88;
     --text-color-hover: #ffd07f;
+    --bg-mode-color: #818181;
+    --bg-mode-color-hover: rgb(47, 51, 54);
 }
 
 /* Format pages */
@@ -20,19 +22,10 @@
 /* Xác định trang đang đứng */
 .nav-under {
     color: var(--text-color) !important;
-    position: relative;
-    width: fit-content;
 }
 
 .nav-under::after {
     /* Hiệu ứng gạch chân */
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: var(--text-color-hover);
-    z-index: 99;
-    bottom: -5px;
     left: 0 !important;
     opacity: 1 !important;
 }
@@ -43,6 +36,7 @@ html {
 }
 
 /* Main */
+
 /* header */
 #header {
     position: fixed;
@@ -55,12 +49,12 @@ html {
     justify-content: space-between;
 }
 
-/* header - logo */
+/* logo */
 #header .logo-header {
     width: 150px;
 }
 
-/* header nav */
+/* navigation */
 #header .nav-header {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -103,24 +97,23 @@ html {
     left: 0;
 }
 
-/* header  */
-
+/* dark and light mode */
 #header .mode {
     width: 150px;
 }
 
 #header .light-mode {
-    color: #fff;
+    color: var(--text-color);
     font-size: 18px;
     padding: 10px;
-    background: #818181;
+    background: var(--bg-mode-color);
     border-radius: 50%;
     margin: 20px 0;
     float: right;
 }
 
 #header .light-mode:hover {
-    background-color: rgb(47, 51, 54);
+    background-color: var(--bg-mode-color-hover);
     color: var(--text-color-hover);
     cursor: pointer;
 }
