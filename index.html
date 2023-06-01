@@ -45,9 +45,14 @@
                 <div class="banner-server-text">
                     join now!
                 </div>
-                <button class="btn-join-server">
+                <button id="btn-copy" class="btn-join-server">
                     Server
                 </button>
+                <audio id="clickSound">
+                    <source src="/assets/audio/mixkit-positive-interface-click-1112.wav" type="audio/wav">
+                </audio>
+                <span class="tooltip">Copy Ip Server!</span>
+                <div id="messCopy" class="message">You have copied successfully!</div>
             </div>
             <img src="/assets/img/banner/lbs-player.png" alt="" class="banner-player">
         </div>
@@ -55,6 +60,7 @@
 
         </div>
     </main>
+    <script src="/assets/javascript/home.js"></script>
 </body>
 
 </html>
