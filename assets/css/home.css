@@ -415,8 +415,7 @@ body {
 /* advertise */
 #advertise {
     height: 100vh;
-    background: url(/assets/img/banner/banner.jpg);
-
+    background: url(/assets/img/banner/banner.jpg) center / cover no-repeat;
 }
 
 /* footer */

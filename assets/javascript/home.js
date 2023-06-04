@@ -18,12 +18,10 @@ btnServer.addEventListener('click', (e) => {
 // Xử lý hiện ứng scroll hiển thị nội dung
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
-
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
         var elementVisible = 200;
-
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("show");
         } else {
@@ -31,5 +29,6 @@ function reveal() {
         }
     }
 }
-
 window.addEventListener("scroll", reveal);
+
+// Xử lý dark mode + light mode:
