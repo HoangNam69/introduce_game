@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/img/logo/favicon/favicon.ico" type="image/x-icon">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>PUNSHUB | HOME</title>
+    <!-- TemplateEndEditable -->
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Icon -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- TemplateBeginEditable name="head" -->
+	 <!-- Style css -->
+    <link rel="stylesheet" href="/assets/css/home.css" type="text/css">
+    <!-- TemplateEndEditable -->
+</head>
+
+<body>
+    <div id="top"></div>
+    <header id="header">
+        <img src="/assets/img/logo/logo01.png" class="logo-header" alt="Logo PUNSHUB" title="Logo PUNSHUB">
+        <ul class="nav-header">
+            <li><a href="#" class="nav-under">Home</a></li>
+            <li><a href="#">Staff</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Rank</a></li>
+        </ul>
+        <div class="mode">
+            <i id="modePage" class="light-mode bx bxs-sun"></i>
+        </div>
+    </header>
+    <!-- TemplateBeginEditable name="template_contents" -->
+    <main id="main">
+      <div id="banner">
+        <div class="banner-text">
+          <div class="banner-title"> Punshub.com </div>
+          <div class="banner-sub-title"> welcome to our new website! </div>
+        </div>
+        <div class="banner-server">
+          <div class="banner-server-text"> join now! </div>
+          <button id="btn-copy" class="btn-join-server"> Server </button>
+          <audio id="clickSound">
+            <source src="/assets/audio/mixkit-positive-interface-click-1112.wav" type="audio/wav">
+          </audio>
+          <span class="tooltip">Copy Ip Server!</span>
+          <div id="messCopy" class="message">You have copied successfully!</div>
+        </div>
+        <img src="/assets/img/banner/lbs-player.png" alt="" class="banner-player"> </div>
+      <div id="notifications">
+        <div id="noti-name" class="notifications-name notifications-name-animation reveal"> announcements </div>
+        <div class="notifications-content reveal">
+          <div class="notifications-information">
+            <p class="notifications-title">news</p>
+            <p class="notifications-sub-title">Latest news</p>
+            <p id="noti-info-description" class="notifications-description">You can find all news, announcements and updates here. Keep up
+              to date on important news for our server!</p>
+          </div>
+          <div class="notifications-slider">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="image"> <img src="/assets/img/logo/logopunshubdisc.png" alt=""> </div>
+                  <div class="content">
+                    <div class="top-info">
+                      <div class="author"> <img src="/assets/img/slider/author/5eefd692-197f-4c81-a091-1d74fbf33b64.png"
+                                                alt=""> <span>LeftBoob</span> </div>
+                      <div class="date"> <i class="bx bxs-calendar"></i> <span>02-06-2023</span> </div>
+                    </div>
+                    <div class="title"> Sg update </div>
+                    <div class="des">
+                      <dl>
+                        <dt>Survival Games Updates (July 11th 2022):</dt>
+                        <dd> - Added in a queue for each region to make joining available games
+                          easier and
+                          faster</dd>
+                        <dd> - Fixed problem... </dd>
+                      </dl>
+                    </div>
+                    <div class="bottom-info"> <span>announcement</span> <a href="#" class="more"> <i class="bx bx-dots-horizontal-rounded"></i> </a> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image"> <img src="/assets/img/logo/logopunshubdisc.png" alt=""> </div>
+                  <div class="content">
+                    <div class="top-info">
+                      <div class="author"> <img src="/assets/img/slider/author/5eefd692-197f-4c81-a091-1d74fbf33b64.png"
+                                                alt=""> <span>LeftBoob</span> </div>
+                      <div class="date"> <i class="bx bxs-calendar"></i> <span>02-06-2023</span> </div>
+                    </div>
+                    <div class="title"> Sg update </div>
+                    <div class="des">
+                      <dl>
+                        <dt>Survival Games Updates (July 11th 2022):</dt>
+                        <dd> - Added in a queue for each region to make joining available games
+                          easier and
+                          faster</dd>
+                        <dd> - Fixed problem... </dd>
+                      </dl>
+                    </div>
+                    <div class="bottom-info"> <span>announcement</span> <a href="#" class="more"> <i class="bx bx-dots-horizontal-rounded"></i> </a> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image"> <img src="/assets/img/logo/logopunshubdisc.png" alt=""> </div>
+                  <div class="content">
+                    <div class="top-info">
+                      <div class="author"> <img src="/assets/img/slider/author/5eefd692-197f-4c81-a091-1d74fbf33b64.png"
+                                                alt=""> <span>LeftBoob</span> </div>
+                      <div class="date"> <i class="bx bxs-calendar"></i> <span>02-06-2023</span> </div>
+                    </div>
+                    <div class="title"> Sg update </div>
+                    <div class="des">
+                      <dl>
+                        <dt>Survival Games Updates (July 11th 2022):</dt>
+                        <dd> - Added in a queue for each region to make joining available games
+                          easier and
+                          faster</dd>
+                        <dd> - Fixed problem... </dd>
+                      </dl>
+                    </div>
+                    <div class="bottom-info"> <span>announcement</span> <a href="#" class="more"> <i class="bx bx-dots-horizontal-rounded"></i> </a> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image"> <img src="/assets/img/logo/logopunshubdisc.png" alt=""> </div>
+                  <div class="content">
+                    <div class="top-info">
+                      <div class="author"> <img src="/assets/img/slider/author/5eefd692-197f-4c81-a091-1d74fbf33b64.png"
+                                                alt=""> <span>LeftBoob</span> </div>
+                      <div class="date"> <i class="bx bxs-calendar"></i> <span>02-06-2023</span> </div>
+                    </div>
+                    <div class="title"> Sg update </div>
+                    <div class="des">
+                      <dl>
+                        <dt>Survival Games Updates (July 11th 2022):</dt>
+                        <dd> - Added in a queue for each region to make joining available games
+                          easier and
+                          faster</dd>
+                        <dd> - Fixed problem... </dd>
+                      </dl>
+                    </div>
+                    <div class="bottom-info"> <span>announcement</span> <a href="#" class="more"> <i class="bx bx-dots-horizontal-rounded"></i> </a> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image"> <img src="/assets/img/logo/logopunshubdisc.png" alt=""> </div>
+                  <div class="content">
+                    <div class="top-info">
+                      <div class="author"> <img src="/assets/img/slider/author/5eefd692-197f-4c81-a091-1d74fbf33b64.png"
+                                                alt=""> <span>LeftBoob</span> </div>
+                      <div class="date"> <i class="bx bxs-calendar"></i> <span>02-06-2023</span> </div>
+                    </div>
+                    <div class="title"> Sg update </div>
+                    <div class="des">
+                      <dl>
+                        <dt>Survival Games Updates (July 11th 2022):</dt>
+                        <dd> - Added in a queue for each region to make joining available games
+                          easier and
+                          faster</dd>
+                        <dd> - Fixed problem... </dd>
+                      </dl>
+                    </div>
+                    <div class="bottom-info"> <span>announcement</span> <a href="#" class="more"> <i class="bx bx-dots-horizontal-rounded"></i> </a> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image"> <img src="/assets/img/logo/logopunshubdisc.png" alt=""> </div>
+                  <div class="content">
+                    <div class="top-info">
+                      <div class="author"> <img src="/assets/img/slider/author/5eefd692-197f-4c81-a091-1d74fbf33b64.png"
+                                                alt=""> <span>LeftBoob</span> </div>
+                      <div class="date"> <i class="bx bxs-calendar"></i> <span>02-06-2023</span> </div>
+                    </div>
+                    <div class="title"> Sg update </div>
+                    <div class="des">
+                      <dl>
+                        <dt>Survival Games Updates (July 11th 2022):</dt>
+                        <dd> - Added in a queue for each region to make joining available games
+                          easier and
+                          faster</dd>
+                        <dd> - Fixed problem... </dd>
+                      </dl>
+                    </div>
+                    <div class="bottom-info"> <span>Announcement</span> <a href="#" class="more"> <i class="bx bx-dots-horizontal-rounded"></i> </a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section id="advertise"></section>
+    <!-- TemplateEndEditable -->
+    <footer id="footer">
+        <div class="contact-footer">
+            <a href="#top"><img src="/assets/img/logo/logo01.png" alt="" class="logo-footer"></a>
+            <a href="https://discord.gg/kZDxjQt9Tc" target="_blank"><i class="bx bxl-discord-alt"></i></a>
+        </div>
+        <div class="cre-footer">
+            &COPY; 02-06-2023 Developed by Hoang Nam.
+        </div>
+    </footer>
+	<!-- TemplateBeginEditable name="template_link_javascript" -->
+	<script src="/assets/javascript/home.js"></script>
+	<!-- TemplateEndEditable -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <!-- TemplateBeginEditable name="template_slider" -->
+	<script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            freeMode: true,
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    </script>
+	<!-- TemplateEndEditable -->
+
+</body>
+
+</html>
