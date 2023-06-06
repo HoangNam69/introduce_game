@@ -55,15 +55,27 @@
     text-shadow: 2px 2px 5px var(--text-color-hover);
 }
 
-/* Notifications */
-.notification-item {
+.banner-text-black-light {
+    color: var(--bg-color) !important;
+}
+
+/* background */
+.staff-background-light {
+    background: var(--text-color) !important;
+}
+
+/* regency */
+.regency-title-light {
+    color: var(--bg-color) !important;
+}
+
+.regency-name-light {
+    color: var(--bg-notifications-info) !important;
+}
+
+.manager-department-light:hover {
     background: var(--bg-noti-light) !important;
 }
-
-.noti-infomation-description {
-    color: var(--text-color-basic) !important;
-}
-
 
 html {
     font-family: 'Poppins', sans-serif;
@@ -203,10 +215,11 @@ body {
     transition: all 0.2s linear;
 }
 
-/* banner */
+
 
 /* #main {} */
 
+/* Banner */
 #banner {
     margin-top: 100px;
     font-size: 56px;
@@ -217,163 +230,175 @@ body {
     color: var(--text-color);
 }
 
-/* Notification */
-#notifications {
-    padding: 50px 150px 150px 150px;
+/* Staff */
+#staff {
+    padding: 30px 0;
     background: var(--bg-color);
 }
 
-#notifications .notifications-name {
-    padding: 12px 16px;
-    height: 81px;
-    margin: 0 auto;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 600;
+/* Regency */
+#staff .regency:not(:first-child) {
+    margin-top: 150px;
+}
+
+#staff .regency:first-child {
+    margin-top: 50px;
+}
+
+#staff .regency-title {
+    width: max-content;
+    font-size: 28px;
+    font-weight: 700;
     color: var(--text-color);
+    padding: 50px 0px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0 auto;
     position: relative;
     top: -100px;
-    width: max-content;
     opacity: 0;
 }
 
-#notifications .notifications-name-animation::after {
-    content: '';
+#staff .regency-title.fisrt {
+    top: 0;
+    opacity: 1;
+}
+
+#staff .regency-title::after {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: var(--text-color-logo);
+    left: 0;
+    bottom: 35%;
 }
 
+/* Element of regency */
+#staff .helper,
+#staff .admin,
+#staff .owner {
+    display: flex;
+    justify-content: center;
+    column-gap: 120px;
+}
 
-#notifications .notifications-content {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    column-gap: 20px;
+#staff .helper,
+#staff .admin {
     transform: translateX(-150px);
-    opacity: 0;
 }
 
-#notifications .notifications-information {
-    color: var(--text-color);
-    padding: 50px;
-    background: var(--bg-notifications-info);
-    height: auto;
+#staff .manager {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    transform: translateX(-150px);
 }
 
-#notifications .notifications-title {
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 600;
+/* Item of elements in regency */
+#staff .manager-item,
+#staff .helper-item,
+#staff .admin-item,
+#staff .owner-item {
+    width: 12rem;
 }
 
-#notifications .notifications-sub-title {
-    font-size: 30px;
-    font-weight: 600;
-    margin-top: 15px;
-}
-
-#notifications .notifications-description {
-    margin-top: 30px;
-    font-size: 16px;
-    opacity: 0.6;
-    font-weight: 300;
-}
-
-/* #notifications .notifications-slider {} */
-
-#notifications .swiper-slide {
-    background: var(--bg-notifications-info);
-    height: auto;
-    padding-bottom: 15px;
-}
-
-#notifications .image {
-    width: 100%;
-    height: 200px;
-    background: var(--text-color-hover);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-#notifications img {
+/* Images of items in element regency */
+#staff .manager-img,
+#staff .helper-img,
+#staff .admin-img,
+#staff .owner-img {
     width: 100%;
 }
 
-#notifications .content {
-    padding: 0 15px;
-}
-
-#notifications .top-info {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    font-size: 16px;
-    color: var(--text-color-basic);
-    height: 30px;
-    padding-top: 5px;
-}
-
-#notifications .author {
-    display: flex;
-}
-
-#notifications .author img {
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-#notifications .date i {
+/* Name of items in regency */
+#staff .manager-name,
+#staff .helper-name,
+#staff .admin-name,
+#staff .owner-name {
     font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color-basic);
 }
 
-#notifications .title {
-    font-size: 21px;
+/* Title of department in regency manager */
+#staff .manager-title {
+    font-size: 20px;
     font-weight: 600;
     color: var(--text-color);
+    margin: 0 auto;
+    padding-top: 20px;
     text-transform: uppercase;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--text-color-basic);
+    letter-spacing: 4px;
+    width: max-content;
+    position: relative;
+    text-shadow: 5px 5px 5px var(--text-color-basic);
 }
 
-#notifications .des {
-    font-size: 14px;
-    color: var(--text-color-basic);
-    padding: 5px 0;
+#staff .manager-title::after {
+    content: "";
+    position: absolute;
+    left: -100px;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: var(--text-color-logo);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
-#notifications .bottom-info {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-color-basic);
-    text-transform: uppercase;
+/* manager body in items manager */
+#staff .manager-body {
+    padding: 80px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
 }
 
-#notifications .bottom-info a {
-    text-decoration: none;
-    color: var(--text-color-basic);
+/* Handle event in manager */
+/* Changes background of departments */
+#staff .manager-ninjaschool:hover,
+#staff .manager-skyblock:hover,
+#staff .manager-survival:hover {
+    background: var(--bg-mode-color);
+    transition: all .2s linear;
 }
 
-#notifications .bottom-info a i {
-    font-size: 40px;
+/* Change name department */
+#staff .manager-ninjaschool:hover .manager-title,
+#staff .manager-skyblock:hover .manager-title,
+#staff .manager-survival:hover .manager-title {
+    text-shadow: 3px 3px 2px var(--bg-notifications-info);
 }
 
-#notifications .bottom-info a:hover i {
-    color: var(--text-color-logo);
+#staff .manager-ninjaschool:hover .manager-title::after,
+#staff .manager-skyblock:hover .manager-title::after,
+#staff .manager-survival:hover .manager-title::after {
+
+    opacity: 1;
+    left: 0;
 }
 
-/* advertise */
-#advertise {
-    height: 100vh;
-    background: url(/assets/img/banner/banner.jpg) center / cover no-repeat;
+/* Change name regency */
+#staff .manager-ninjaschool:hover .manager-name,
+#staff .manager-skyblock:hover .manager-name,
+#staff .manager-survival:hover .manager-name,
+#staff .manager-img:hover+.manager-name,
+#staff .helper-img:hover+.helper-name,
+#staff .owner-img:hover+.owner-name,
+#staff .admin-img:hover+.admin-name {
+    color: var(--text-color);
+    transition: all .2s linear;
+}
+
+/* Handle event for img when you hover in img of items */
+#staff .manager-img:hover,
+#staff .helper-img:hover,
+#staff .owner-img:hover,
+#staff .admin-img:hover {
+    scale: 1.1;
+    /* transform: translateY(-30px); */
+    transition: all .2s linear;
+    cursor: pointer;
 }
 
 /* footer */
