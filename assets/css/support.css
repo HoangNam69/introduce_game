@@ -1,0 +1,328 @@
+:root {
+    --bg-color: #111216;
+    --bg-mode-color: #818181;
+    --bg-mode-color-hover: rgb(47, 51, 54);
+    --bg-notifications-info: #272A33;
+    --bg-noti-light: #efeff0;
+    --bg-question-content: rgba(0, 0, 0, 0.03);
+    --text-color: #fff;
+    --text-color-basic: #767d88;
+    --text-color-hover: #ffd07f;
+    --text-color-logo: #fca65f;
+}
+
+/* Format pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common */
+.clear {
+    clear: both;
+}
+
+
+
+.show {
+    opacity: 1 !important;
+    top: 0 !important;
+    transition: all .8s linear;
+    transform: translateX(0) !important;
+}
+
+/* light mode */
+/* header */
+.light {
+    background: var(--text-color) !important;
+}
+
+.text-light {
+    color: var(--bg-color) !important;
+}
+
+.text-light-hover:hover {
+    color: var(--bg-color) !important;
+}
+
+/* banner */
+.banner-light {
+    background: url(/assets/img/banner/banner-light.jpg) top / cover no-repeat !important;
+}
+
+.banner-text-light {
+    color: var(--bg-notifications-info) !important;
+    text-shadow: 2px 2px 5px var(--text-color-hover);
+}
+
+.banner-text-black-light {
+    color: var(--bg-color) !important;
+}
+
+
+html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-color);
+
+}
+
+/* Main Content */
+body {
+    height: max-content;
+}
+
+/* header */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: var(--bg-color);
+    /* background: white; */
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/* logo */
+#header .logo-header {
+    width: 150px;
+}
+
+/* navigation */
+#header .nav-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    list-style-type: none;
+    display: flex;
+}
+
+#header .nav-header li {
+    padding: 0 16px;
+}
+
+#header .nav-header li a {
+    text-decoration: none;
+    color: var(--text-color-basic);
+    width: fit-content;
+    position: relative;
+}
+
+#header .nav-header li a.nav-under:hover,
+#header .nav-header li a.nav-under {
+    color: var(--text-color);
+}
+
+#header .nav-header li a.nav-under::after {
+    /* Hiệu ứng gạch chân  */
+    left: 0;
+    opacity: 1;
+}
+
+/* Xác định trang đang đứng */
+/*  */
+
+/**/
+
+#header .nav-header li a:hover {
+    color: var(--text-color-hover);
+}
+
+/* Hiệu ứng gạch chân */
+#header .nav-header li a::after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--text-color-logo);
+    opacity: 0;
+    bottom: -5px;
+    left: -20px;
+    transition: .5s;
+}
+
+#header .nav-header li a:hover::after {
+    opacity: 1;
+    left: 0;
+}
+
+/* dark and light mode */
+#header .mode {
+    width: 150px;
+}
+
+#header .light-mode {
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 10px;
+    background: var(--bg-mode-color);
+    border-radius: 50%;
+    margin: 20px 0;
+    float: right;
+    transition: 0.2s;
+}
+
+#header .light-mode:hover {
+    background-color: var(--bg-mode-color-hover);
+    color: var(--text-color-hover);
+    cursor: pointer;
+}
+
+#header .dark-mode {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--text-color-logo);
+    color: var(--text-color-basic);
+    float: right;
+}
+
+#header .dark-mode:hover {
+    cursor: pointer;
+    background: var(--text-color-hover);
+    color: var(--bg-notifications-info);
+    transition: all 0.2s linear;
+}
+
+
+
+/* #main {} */
+
+/* Banner */
+#banner {
+    margin-top: 100px;
+    font-size: 56px;
+    background: url(/assets/img/banner/banner.jpg) top / cover no-repeat;
+    padding: 85px 0;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Staff */
+#support {
+    padding: 30px 150px;
+    background: var(--bg-color);
+}
+
+/* question */
+#support .question {
+    width: 50%;
+}
+
+#support .question-title {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+#support .question-title i {
+    width: 30px;
+    height: 30px;
+    background: var(--text-color);
+    border-radius: 50%;
+    color: var(--bg-color);
+    border: none;
+    outline: none;
+}
+
+#support .question-contents {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#support .question-contents>li {
+    height: fit-content;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#support .question-contents>li .ask {
+    width: 100%;
+    height: 100%;
+    background: #272A33;
+}
+
+#support .question-contents>li:first-child {
+    margin-top: 20px;
+}
+
+#support .question-contents>li:not(:active) .question-sub-contents>li {
+    display: none;
+}
+
+#support .question-contents>li:active .question-sub-contents>li {
+    display: block;
+}
+
+/* sub contents in question */
+#support .question-sub-contents {
+    list-style-type: none;
+    /* display: none; */
+    margin-top: 10px;
+    background: var(--bg-color);
+}
+
+#support .question-sub-contents>li {
+    color: var(--text-color-basic);
+    font-size: 14px;
+    font-weight: 400;
+    display: none;
+}
+
+#support .question-sub-contents>li span {
+    color: var(--text-color-logo);
+}
+
+/* footer */
+#footer {
+    background: var(--bg-color);
+    padding: 50px 150px;
+}
+
+#footer .contact-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--bg-notifications-info);
+    padding: 20px 0;
+}
+
+#footer .contact-footer .logo-footer {
+    width: 150px;
+}
+
+#footer .contact-footer a {
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--text-color-basic);
+}
+
+#footer .contact-footer a:hover {
+    color: var(--text-color);
+    scale: 1.1;
+}
+
+#footer .cre-footer {
+    color: var(--text-color-basic);
+    padding-top: 25px;
+    font-size: 12px;
+}
