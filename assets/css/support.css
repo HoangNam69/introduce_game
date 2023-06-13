@@ -23,8 +23,6 @@
     clear: both;
 }
 
-
-
 .show {
     opacity: 1 !important;
     top: 0 !important;
@@ -58,6 +56,12 @@
 
 .banner-text-black-light {
     color: var(--bg-color) !important;
+}
+
+/* show answer */
+.show_answer {
+    display: block !important;
+    transition: 0.25s ease-in-out;
 }
 
 
@@ -271,7 +275,7 @@ body {
     color: var(--text-color);
     font-size: 16.8px;
     font-weight: 700;
-    margin: 10px 0;
+    margin: 25px 0;
 }
 
 #support .question-contents>li:first-child {
@@ -328,7 +332,7 @@ body {
 
 #support .btn-support-ticket:hover {
     cursor: pointer;
-    background: var(--text-color-hover);
+    opacity: 0.7;
 }
 
 /* footer */
