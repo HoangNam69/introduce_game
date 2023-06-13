@@ -223,13 +223,31 @@ body {
 /* question */
 #support .question {
     width: 50%;
+    float: left;
 }
 
+/* Title of questions */
+#support .tickets-title,
 #support .question-title {
     color: var(--text-color);
     text-transform: uppercase;
     font-weight: 900;
     font-size: 28px;
+    position: relative;
+    z-index: 1;
+    width: max-content;
+}
+
+#support .tickets-title::before,
+#support .question-title::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, var(--text-color-logo), transparent 90%);
+    z-index: -1;
 }
 
 #support .question-title i {
@@ -242,54 +260,75 @@ body {
     outline: none;
 }
 
+/* content questions */
+#support .question-sub-contents,
 #support .question-contents {
     list-style-type: none;
     padding-left: 20px;
 }
 
 #support .question-contents>li {
-    height: fit-content;
     color: var(--text-color);
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-}
-
-#support .question-contents>li .ask {
-    width: 100%;
-    height: 100%;
-    background: #272A33;
+    font-size: 16.8px;
+    font-weight: 700;
+    margin: 10px 0;
 }
 
 #support .question-contents>li:first-child {
     margin-top: 20px;
 }
 
-#support .question-contents>li:not(:active) .question-sub-contents>li {
-    display: none;
-}
-
-#support .question-contents>li:active .question-sub-contents>li {
-    display: block;
-}
-
 /* sub contents in question */
 #support .question-sub-contents {
-    list-style-type: none;
-    /* display: none; */
-    margin-top: 10px;
-    background: var(--bg-color);
+    color: var(--text-color-basic);
+    font-size: 14px;
+    font-weight: 300;
+    padding: 20px 0;
+    display: none;
 }
 
 #support .question-sub-contents>li {
-    color: var(--text-color-basic);
-    font-size: 14px;
-    font-weight: 400;
-    display: none;
+    padding-bottom: 10px;
 }
 
 #support .question-sub-contents>li span {
     color: var(--text-color-logo);
+}
+
+/* Tickets */
+#support .tickets {
+    width: 50%;
+    float: left;
+    padding-left: 65px;
+}
+
+/* #support .tickets-title {} */
+
+#support .tickets-content {
+    color: var(--text-color-basic);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#support .tickets-content p {
+    margin-bottom: 15px;
+}
+
+#support .btn-support-ticket {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px 0;
+    font-size: 14px;
+    background: var(--text-color-logo);
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-family: 700;
+}
+
+#support .btn-support-ticket:hover {
+    cursor: pointer;
+    background: var(--text-color-hover);
 }
 
 /* footer */
