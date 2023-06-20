@@ -156,6 +156,11 @@ btn_close.addEventListener("click", () => {
 btn_View.forEach((n, index) => {
     n.addEventListener("click", (e) => {
         modal.style.display = "block"
+        dataRank.forEach((elements, i) => {
+            if (index == i) {
+                
+            }
+        });
     })
 })
 
