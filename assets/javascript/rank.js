@@ -48,7 +48,7 @@ var dataRank = [
         prefix: "/assets/img/rank/description/mvpYou.png",
         info: [
             {
-                sub_title:"Perks",
+                sub_title: "Perks",
                 content: [
                     "Prefix:",
                     "#2 highest priority in the queue",
@@ -58,8 +58,8 @@ var dataRank = [
                     "Flying enabled in lobbies",
                     "Support the server!"
                 ]
-            },{
-                sub_title:"Practice",
+            }, {
+                sub_title: "Practice",
                 content: [
                     "Sidebar customization",
                     "9 Cosmetic Armor colors",
@@ -71,8 +71,8 @@ var dataRank = [
                     "/event host (<span class='hight-light'>Host your own events</span>)",
                     "9 Death Effects"
                 ]
-            },{
-                sub_title:"Mini Games",
+            }, {
+                sub_title: "Mini Games",
                 content: [
                     "/announce (<span class='hight-light'>Alert entire network to join</span>)"
                 ]
@@ -86,7 +86,7 @@ var dataRank = [
         prefix: "/assets/img/rank/description/proYou.png",
         info: [
             {
-                sub_title:"Perks",
+                sub_title: "Perks",
                 content: [
                     "Prefix:",
                     "#3 highest priority in the queue",
@@ -96,8 +96,8 @@ var dataRank = [
                     "Flying enabled in lobbies",
                     "Support the server!"
                 ]
-            } , {
-                sub_title:"Practice",
+            }, {
+                sub_title: "Practice",
                 content: [
                     "Duels Map Selector (<span class='hight-light'>100+ Maps</span>)",
                     "/tpv (<span class='hight-light'>See players in the lobby</span>)",
@@ -105,8 +105,8 @@ var dataRank = [
                     "Basic Cosmetic Armor",
                     "9 Death Effects"
                 ]
-            },{
-                sub_title:"Mini Games",
+            }, {
+                sub_title: "Mini Games",
                 content: [
                     "/announce (<span class='hight-light'>Alert entire network to join</span>)"
                 ]
@@ -120,7 +120,7 @@ var dataRank = [
         prefix: "/assets/img/rank/description/vipYou.png",
         info: [
             {
-                sub_title:"Perks",
+                sub_title: "Perks",
                 content: [
                     "Prefix:",
                     "#4 highest priority in the queue",
@@ -131,7 +131,7 @@ var dataRank = [
                 ]
             },
             {
-                sub_title:"Practice",
+                sub_title: "Practice",
                 content: [
                     "9 Death Effects"
                 ]
@@ -142,12 +142,17 @@ var dataRank = [
 
 // var el = dataRank[0].
 
-console.log(dataRank[0].info[0].content[0])
+
 
 var btn_View = document.querySelectorAll(".btn-view")
 var rank_Card_Armorial = document.querySelectorAll(".rank-card-armorial")
 var btn_close = document.getElementById("modal-close")
 var modal = document.getElementById("modal")
+var img_Armorial = document.querySelector(".modal-armorial img")
+var name_Armorial = document.querySelector(".modal-armorial .name-armorial")
+var price_Arimorial = document.querySelector(".modal-armorial .handle .price .number")
+var modal_Information = document.querySelector(".modal-description .modal-info")
+
 
 btn_close.addEventListener("click", () => {
     modal.style.display = "none"
@@ -158,7 +163,24 @@ btn_View.forEach((n, index) => {
         modal.style.display = "block"
         dataRank.forEach((elements, i) => {
             if (index == i) {
-                
+                img_Armorial.src = dataRank[i].url
+                name_Armorial.innerHTML = dataRank[i].rank_card_title
+                price_Arimorial.innerHTML = dataRank[i].price
+                var xhtml = ""
+                dataRank[i].info.forEach(j => {
+                    xhtml += `<div class="modal-sub-title">` + j.sub_title + `</div>`
+                    xhtml += `<ul class="modal-list-description">`
+                    j.content.forEach(k => {
+                        if (k == "Prefix:") {
+                            console.log(dataRank[i].prefix)
+                            xhtml += `<li>` + k + `<img src="` + dataRank[i].prefix + `">` + `</li>` 
+                        } else {
+                            xhtml += `<li>` + k + `</li>`
+                        }
+                    })
+                    xhtml += `</ul>`
+                })
+                modal_Information.innerHTML = xhtml
             }
         });
     })
