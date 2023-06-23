@@ -173,7 +173,7 @@ btn_View.forEach((n, index) => {
                     j.content.forEach(k => {
                         if (k == "Prefix:") {
                             console.log(dataRank[i].prefix)
-                            xhtml += `<li>` + k + `<img src="` + dataRank[i].prefix + `">` + `</li>` 
+                            xhtml += `<li>` + k + `<img src="` + dataRank[i].prefix + `">` + `</li>`
                         } else {
                             xhtml += `<li>` + k + `</li>`
                         }
@@ -184,5 +184,145 @@ btn_View.forEach((n, index) => {
             }
         });
     })
+})
+
+
+
+
+// Xử lý dark mode + light mode:
+var mode_Page = document.getElementById('modePage')
+let mode_count = localStorage.getItem("mode_count")
+if (mode_count === null) {
+    mode_count = 1
+    localStorage.setItem('mode_count', mode_count);
+} else {
+    mode_count = parseInt(mode_count);
+}
+
+
+
+var header_Light = document.getElementById('header')
+var li_NavHeader = document.querySelectorAll('ul.nav-header li');
+var banner_Light = document.getElementById('banner');
+var footer_Light = document.getElementById("footer")
+var footer_Contact_Light = document.querySelector("#footer a i")
+var rank_light = document.getElementById("rank")
+var rank_Card_Light = document.querySelectorAll(".rank-card")
+var rank_Card_Title_light = document.querySelectorAll(".rank-card-title")
+var modal_Content_Light = document.querySelector("#modal .modal-content")
+var modal_Armorial_Light = document.querySelector("#modal .modal-content .modal-armorial")
+var modal_price = document.querySelector("#modal .handle .price")
+
+if (mode_count % 2 == 0) {
+    // Change icon
+    mode_Page.classList.remove("light-mode", "bxs-sun")
+    mode_Page.classList.add("dark-mode", "bxs-moon")
+    // header
+    header_Light.classList.add("light")
+    // nav header
+    li_NavHeader.forEach(i => {
+        var a = i.querySelectorAll('a');
+        a.forEach(j => {
+            if (j.className !== "nav-under") {
+                j.classList.add("text-light-hover");
+            } else if (j.className === "nav-under") {
+                j.classList.add("text-light");
+            }
+        });
+    });
+    // banner
+    banner_Light.classList.add("banner-light", "banner-text-black-light")
+    // footer
+    footer_Light.classList.add("light")
+    footer_Contact_Light.classList.add("text-light-hover")
+    // Start rank
+    rank_light.classList.add("light-rank-bg")
+    rank_Card_Light.forEach(i => {
+        i.classList.add("light")
+    })
+    rank_Card_Title_light.forEach(i => {
+        i.classList.add("light-rank-title-bg")
+    })
+    modal_Content_Light.classList.add("light-modal-content-bg")
+    modal_Armorial_Light.classList.add("light-modal-bg")
+    modal_price.classList.add("banner-text-black-light")
+    // End rank
+}
+
+
+mode_Page.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (mode_count % 2 != 0) {
+        // Change icon
+        mode_Page.classList.remove("light-mode", "bxs-sun")
+        mode_Page.classList.add("dark-mode", "bxs-moon")
+        // header
+        header_Light.classList.add("light")
+        // nav header
+        li_NavHeader.forEach(i => {
+            var a = i.querySelectorAll('a');
+            a.forEach(j => {
+                if (j.className !== "nav-under") {
+                    j.classList.add("text-light-hover");
+                } else if (j.className === "nav-under") {
+                    j.classList.add("text-light");
+                }
+
+            });
+        });
+        // banner
+        banner_Light.classList.add("banner-light", "banner-text-black-light")
+        // footer
+        footer_Light.classList.add("light")
+        footer_Contact_Light.classList.add("text-light-hover")
+        // Start rank
+        rank_light.classList.add("light-rank-bg")
+        rank_Card_Light.forEach(i => {
+            i.classList.add("light")
+        })
+        rank_Card_Title_light.forEach(i => {
+            i.classList.add("light-rank-title-bg")
+        })
+        modal_Content_Light.classList.add("light-modal-content-bg")
+        modal_Armorial_Light.classList.add("light-modal-bg")
+        modal_price.classList.add("banner-text-black-light")
+        // End rank
+
+    } else if (mode_count % 2 == 0) {
+        // Change icon
+        mode_Page.classList.remove("dark-mode", "bxs-moon")
+        mode_Page.classList.add("light-mode", "bxs-sun")
+        // header
+        header_Light.classList.remove("light")
+        // nav header
+        li_NavHeader.forEach(i => {
+            var a = i.querySelectorAll('a');
+            a.forEach(j => {
+                if (j.className !== "nav-under") {
+                    j.classList.remove("text-light-hover");
+                }
+                j.classList.remove("text-light");
+            });
+        });
+        // banner
+        banner_Light.classList.remove("banner-light", "banner-text-black-light")
+        // footer
+        footer_Light.classList.remove("light")
+        footer_Contact_Light.classList.remove("text-light-hover")
+        // Start rank
+        rank_light.classList.remove("light-rank-bg")
+        rank_Card_Light.forEach(i => {
+            i.classList.remove("light")
+        })
+        rank_Card_Title_light.forEach(i => {
+            i.classList.remove("light-rank-title-bg")
+        })
+        modal_Content_Light.classList.remove("light-modal-content-bg")
+        modal_Armorial_Light.classList.remove("light-modal-bg")
+        modal_price.classList.remove("banner-text-black-light")
+        // End rank
+    }
+    mode_count++;
+    localStorage.setItem('mode_count', mode_count)
 })
 

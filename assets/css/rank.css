@@ -6,15 +6,18 @@
     --bg-noti-light: #efeff0;
     --bg-question-content: rgba(0, 0, 0, 0.03);
     --bg-modal: rgba(0, 0, 0, 0.5);
+    --bg-modal-light: #F8F6F4;
     --bg-card-color: #14161B;
     --bg-btn-success: #17ad56;
     --bg-btn-success-hover: #138b45;
+    --bg-card-rank-light: #a7a6a8;
     --text-color: #fff;
     --text-color-basic: #767d88;
     --text-color-hover: #ffd07f;
     --text-color-logo: #fca65f;
     --text-modal: #a7a6a8;
     --orange-color: #ff7300;
+
 }
 
 /* Format pages */
@@ -40,6 +43,24 @@
 /* header */
 .light {
     background: var(--text-color) !important;
+}
+
+.light-rank-bg {
+    background: var(--bg-noti-light) !important;
+}
+
+.light-rank-title-bg {
+    background: var(--bg-noti-light) !important;
+    color: var(--text-color-basic) !important;
+}
+
+.light-modal-bg {
+    background: var(--text-modal) !important;
+}
+
+.light-modal-content-bg {
+    background: var(--bg-modal-light) !important;
+    color: var(--bg-notifications-info) !important;
 }
 
 .text-light {
@@ -249,6 +270,7 @@ body {
     background: var(--bg-card-color);
     text-align: center;
     padding: 15px;
+    border-radius: 8px;
 }
 
 #rank .rank-card-title {
@@ -330,7 +352,7 @@ body {
     height: 100vh;
     display: none;
 }
-
+/* Button close modal */
 #modal .bnt-modal-close {
     position: absolute;
     top: 10px;
@@ -343,11 +365,13 @@ body {
     cursor: pointer;
 }
 
+/* Phần nội dung của modal */
 #modal .modal-content {
     border-top-left-radius: 30px;
     border-end-start-radius: 30px;
     width: 70vw;
     margin: 0px auto;
+    padding-bottom: 20px;
     background: var(--bg-color);
     display: grid;
     grid-template-columns: 400px auto;
@@ -459,7 +483,7 @@ body {
 }
 
 #modal .hight-light {
-    color: var(--text-color-logo);
+    color: var(--orange-color) !important;
 }
 
 #modal .note {
